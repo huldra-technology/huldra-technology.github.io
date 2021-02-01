@@ -1,190 +1,71 @@
 <!-- index.html -->
 <html>
-   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Games Huldra." />
-    <meta name="keywords" content="games,wii u" />
-    <meta name="author" content="© 2021 A.W.Haugen" />
-    <meta name="theme-color" content="#212529"/>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <head>
+        <link rel="icon" type="image/png" href="logo.png">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="Games Huldra." />
+        <meta name="keywords" content="games,wii u" />
+        <meta name="author" content="© 2021 A.W.Haugen" />
+        <meta name="theme-color" content="#212529"/>
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+        <link rel="shortcut icon" sizes="196x196" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png">
 
-    <title>Huldra - Games</title>
+        <title>Huldra - Games</title>
 
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="NES.css" />
-    <meta property="og:url" content="https://huldra-technology.github.io/" />
-    <meta property="og:description" content="Huldra Technology Games" />
-    <meta property="og:image" content="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@bc_rikko" />
-    <meta name="twitter:creator" content="@bc_rikko" />
-    <meta name="twitter:image" content="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" />
-    </script>
-  </head>
-  <body>
-	  <div id="nescss">
-      <header :class="{ sticky: scrollPos > 50 }">
-        <div class="container">
-          <div class="nav-brand">
-            <a href="https://huldra.games/">
-              <h1><img src="logo.png">
-            </a>
-          </div>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="NES.css" />
+        <meta property="og:url" content="https://huldra-technology.github.io/" />
+        <meta property="og:description" content="Huldra Technology Games" />
+        </script>
+    </head>
+    <body>
 
-          <div class="social-buttons">
-            <p>Share on social media</p>
-            <div class="share">
-              <a href="https://twitter.com/share?text=NES.css%EF%BD%9CNES-style%20CSS%20Framework%20%40bc_rikko&url=https://nostalgic-css.github.io/NES.css/" target="_blank"><i class="nes-icon twitter"></i></a>
-              <a href="https://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework" target="_blank"><i class="nes-icon facebook"></i></a>
-              <a href="https://www.linkedin.com/shareArticle?url=https%3A//nostalgic-css.github.io/NES.css/&title=NES.css%EF%BD%9CNES-style%20CSS%20Framework" target="_blank"><i class="nes-icon linkedin"></i></a>
-              <a href="https://github.com/nostalgic-css/NES.css" target="_blank"><i class="nes-icon github"></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div class="container">
-        <main class="main-content">
-          <a class="github-link" :class="{ active:  scrollPos < 200 }" href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener" @mouseover="startAnimate" @mouseout="stopAnimate">
-            <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
-            <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
-          </a>
-
-          <!-- About -->
-          <section class="topic">
-            <h2 id="about"><a href="#about">#</a>About</h2>
-            <p>Huldra Games is a games developer. We make games for Wii U and 3DS!</p>
-          </section>
-
-          <section class="topic">
-            <h2 id="games"><a href="#games">#</a>Games</h2>
-            <p>The Castle</p>
-            <p>Wii U and 3DS. Video here</p>
-          </section>
-
-          <!-- Usage 
-          <section class="topic">
-            <h2 id="usage"><a href="#usage">#</a>Usage</h2>
-            <p>NES.css only provides components. You will need to define your own layout.</p>
-
-            <section class="showcase" v-for="sample in collection" :key="sample">
-              <section class="nes-container with-title">
-                <h3 class="title">{{ sample.title | capitalize }}</h3>
-                <div
-                  :id="sample.title"
-                  class="item"
-                  v-html="sample.code">
+        <!-- Header -->
+        <div id="nescss">
+            <header>
+                <div class="nav-brand">
+                    <a href="https://huldra.games/">
+                        <img src="logo.png">
+                    </a>
                 </div>
-                <p v-if="sample.description" class="description nes-text">{{ sample.description }}</p>
-                <p v-if="sample.note" class="note nes-text is-error">{{ sample.note }}</p>
-                <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
-              </section>
-              <section class="samplecode" v-show="sample.showCode">
-                <button type="button" class="nes-btn copycode" @click="copy($event, sample.title)">copy</button>
-                <pre><code class="html">{{ sample.code }}</code></pre>
-              </section>
-            </section>
-          </section>
-	  -->
-          <!-- Members -->
-          <section class="topic">
-            <h2 id="members"><a href="#members">#</a>Members</h2>
-            <section class="coreteam">
-              <h3 class="topic-title"><i class="nes-icon star"></i>Core Team Members</h3>
-              <p>Here is core team members developing Huldra Games.</p>
+            </header>
 
-              <div class="coreteam-members">
-                <template v-for="member in coreteam">
-                  <section class="nes-container is-dark member-card">
-                    <div class="avatar">
-                      <img class="lazy" :data-src="'https://github.com/' + member.github + '.png?size=80'" :alt="'Core Member ' + member.name">
-                    </div>
-                    <div class="profile">
-                      <h4 class="name">{{ member.name }}</h4>
-                      <p>{{ member.feat }}</p>
-                      <div>
-                        <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
-                        <a v-if="member.twitter" :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
-                      </div>
-                    </div>
-                  </section>
-                </template>
-              </div>
-            </section>
-            <section class="coreteam-emeriti" v-if="emeriti.length > 0">
-              <h3 class="topic-title"><i class="nes-icon trophy"></i>Core Team Emeriti</h3>
-              <p>Here we honor some no-longer-active core team members.</p>
+            <!-- Main Content -->
+            <div class="container">
+                <main class="main-content">
 
-              <div class="coreteam-members">
-                <template v-for="member in emeriti">
-                  <section class="nes-container is-dark member-card">
-                    <div class="avatar">
-                      <img class="lazy" :data-src="'https://github.com/' + member.github + '.png?size=80'" :alt="'Emeriti ' + member.name">
-                    </div>
-                    <div class="profile">
-                      <h4 class="name">{{ member.name }}</h4>
-                      <p>{{ member.feat }}</p>
-                      <div>
-                        <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
-                        <a v-if="member.twitter" :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
-                      </div>
-                    </div>
-                  </section>
-                </template>
-              </div>
-            </section>
-            <section class="contributors">
-              <h3 class="topic-title"><i class="nes-icon heart"></i>Contributors</h3>
-              <template v-for="user in contributors">
-                <a class="contributor" :href="'https://github.com/' + user" target="_black">
-                  <img class="nes-avatar is-large is-rounded lazy" :data-src="'https://github.com/' + user + '.png?size=64'" :alt="'Contributor ' + user">
-                  <p>{{ user }}</p>
-                </a>
-              </template>
-            </section>
-          </section>
+                    <h3 class="nes-container is-dark">THE CASTLE<p><p>Available now on 3DS and Wii U<button type="button" class="nes-btn copycode is-success" onclick="window.location.href='https://nintendo.com/games/buy-digital/'">Nintendo eShop</button></h3>
+                    <p></p>
 
-          <!-- Articles -->
-          <section class="topic">
-              <h2 id="articles"><a href="#articles">#</a>Articles</h2>
-              <article class="article-link">
-                <h3 class="title">
-                  <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank" rel="noopener"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
-                </h3>
-              </article>
-              <article class="article-link">
-                <h3 class="title">
-                  <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank" rel="noopener"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
-                </h3>
-              </article>
-          </section>
 
-        </main>
+                    <section class="nes-container is-dark">
+                        <section class="message-list">
+                            <section class="message -left">
+                                <i class="nes-bcrikko"></i>
+                                <!-- Balloon -->
+                                <div class="nes-balloon from-left is-dark">
+                                    <p>Welcome to <a>huldra.technology</a></p>
+                                </div>
+                            </section>
 
-        <footer>
-          <p>
-            <span>&copy;2018</span>
-            <a href="https://kuroeveryday.blogspot.com/" target="_blank" rel="noopener">Black Everyday Company</a>
-            <span>-</span>
-            <a href="https://twitter.com/bc_rikko" target="_blank" rel="noopener">@bc_rikko</a>
-          </p>
-        </footer>
+                        </section>
+                    </section>
+                    </section>
 
-        <!-- Copied balloon -->
-        <div class="nes-balloon from-right copied-balloon" :style="copiedBalloon">
-          <p>copied!!</p>
-        </div>
+                </main>
 
-        <!-- FAB Button -->
-        <button type="button" class="nes-btn is-error scroll-btn" :class="{ active: scrollPos > 500 }" @click="window.scrollTo({ top:0, behavior: 'smooth' })"><span>&lt;</span></button>
-      </div>
-    </div>
-  </body>
+                <footer>
+                    <p>
+                    <span>&copy; 2021</span>
+                    <a href="https://huldra-technology.com/" target="_blank" rel="noopener">Huldra Technology</a>
+                    </p>
+                </footer>
+            </div>
+    </body>
 </html>
